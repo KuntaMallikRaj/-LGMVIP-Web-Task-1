@@ -1,0 +1,310 @@
+:root {
+  --color-primary: #5ec576;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.todo__container {
+  width: 50%;
+  background-image: linear-gradient(to top left, #8041a5, #e800fd);
+  min-width: 350px;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.new__todo {
+  position: relative;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo__input {
+  width: 60%;
+  height: 35px;
+  border: 2px solid #d1d3d8;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.todo__input:focus {
+  outline: none;
+}
+
+.pri {
+  width: 8%;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.pri:focus {
+  outline: none;
+}
+
+.calender {
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  width: 20%;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.calender:focus {
+  outline: none;
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.about {
+  width: 50%;
+}
+
+.add__btn,
+.save__btn,
+.sort__btn,
+.del__all,
+.task-type {
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.task-type {
+  margin-right: 1.2rem;
+}
+
+.add__btn {
+  background-image: linear-gradient(
+    to top left,
+    rgb(1, 241, 1),
+    rgb(196, 250, 196)
+  );
+  /* transition: all 10s; */
+}
+
+.add__btn:hover {
+  background-image: linear-gradient(
+    to top right,
+    rgb(1, 252, 1),
+    rgb(2, 252, 2)
+  );
+}
+
+.del__all {
+  background-image: linear-gradient(
+    to top left,
+    rgb(255, 43, 43),
+    rgb(252, 115, 115)
+  );
+}
+
+.sort__btn {
+  background-color: #7bdaff;
+}
+
+.over {
+  max-height: 490px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.over::-webkit-scrollbar {
+  display: none;
+}
+
+.todo__list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9px;
+  padding: 10px 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(226, 222, 222);
+  min-height: 40px;
+  margin-bottom: 9px;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.task__info {
+  word-break: break-all;
+  width: 70%;
+  font-family: 'Poppins', sans-serif;
+  cursor: default;
+}
+
+.pri_btn,
+.check_btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pri_btn {
+  width: 2%;
+}
+
+.pri {
+  width: 15%;
+}
+
+.due_date {
+  font-family: sans-serif;
+  font-size: small;
+  width: 12%;
+  text-align: right;
+  word-break: break-all;
+}
+
+.date {
+  font-size: 0.9rem;
+}
+
+.del__task,
+.edit__task {
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+  background-color: white;
+  text-align: right;
+}
+
+.del__task {
+  color: red;
+}
+
+.edit__task {
+  color: blue;
+}
+
+.copyright {
+  margin-top: auto;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  color: white;
+  text-align: end;
+  padding: 0.4rem;
+}
+
+.copy-rights {
+  justify-content: space-around;
+}
+
+.linkedin-link:link,
+.linkedin-link:visited {
+  text-decoration: none;
+  color: rgb(235, 234, 234);
+  transition: all 0.2s;
+}
+.copyright,
+.linkedin-link:link {
+  font-size: 0.8rem;
+}
+
+.linkedin-link:hover,
+.linkedin-link:active {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+  opacity: 0.9;
+}
+[data-title]:after {
+  content: attr(data-title);
+  height: 16px;
+  padding: 5px;
+  background-color: rgb(128, 128, 128);
+  color: white;
+  position: absolute;
+  opacity: 0;
+  bottom: 2.5rem;
+  right: 0.1rem;
+  white-space: nowrap;
+  border-radius: 3px;
+  opacity: 0;
+  border: none;
+  z-index: 99999;
+  visibility: hidden;
+  font-family: sans-serif;
+}
+[data-title] {
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    max-width: 35%;
+  }
+  .task__info {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    max-width: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    max-width: 5%;
+  }
+  body {
+    min-height: 40vh;
+  }
+  .copyright,
+  .linkedin-link:link {
+    font-size: 0.6rem;
+  }
+}

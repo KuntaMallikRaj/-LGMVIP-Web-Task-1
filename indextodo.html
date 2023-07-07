@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="scriptv2.js"></script>
+  </head>
+  <body>
+    <div class="todo__container">
+      <div class="new__todo">
+        <input
+          class="todo__input"
+          type="text"
+          placeholder="What are you planning to do?"
+        />
+        <select name="" id="" class="pri">
+          <option value="-200">Priority</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <input type="date" name="" id="" class="calender" />
+      </div>
+      <div class="sort">
+        <div class="about"></div>
+        <button class="add__btn" data-title="Add task">ADD</button>
+        <button class="save__btn hidden">SAVE</button>
+        <button class="del__all" data-title="Delete all tasks">DEL ALL</button>
+        <button class="sort__btn" data-title="Sort tasks by Priority">
+          SORT&downarrow;
+        </button>
+        <select name="" id="" class="task-type">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+        </select>
+      </div>
+      <div class="over">
+        <div class="todo__list"></div>
+      </div>
+      <div class="copy-rights">
+        <!-- <div class="dummy"></div> -->
+        <p class="copyright">
+          &copy;
+          <a
+            class="linkedin-link"
+            target="_blank"
+            href="https://linkedin.com/in/aditya-surishetti"
+            >Aditya Surishetti</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
